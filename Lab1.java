@@ -6,14 +6,24 @@ public class Lab1
 {
 	public static void main(String[] args)throws IOException
 	{
-		int[][] a = new int[][] {{1, 1, 0, 0, 0},
-								{0, 1, 0, 0, 1},
-								{1, 0, 0, 1, 1},
-								{0, 0, 0, 0, 0},
-								{1, 0, 1, 0, 1}
-								};
+//		int[][] a = new int[][] {{1, 1, 0, 0, 0},
+//								{0, 1, 0, 0, 1},
+//								{1, 0, 0, 1, 1},
+//								{0, 0, 0, 0, 0},
+//								{1, 0, 1, 0, 1}
+//								};
+		System.out.println("Enter the 2D matrix: ");
+		int[][] a = new int[5][5];
+		Scanner scan = new Scanner(System.in);						
+		for (int i = 0; i < 5; i++) {
+			for (int j = 0; j < 5; j++) {
+				a[i][j] = scan.nextInt();
+			}
+		}
+								
 		System.out.println("Number of Islands is: " +
 						countIslands(a));
+		scan.close();
 	}
 
 	
